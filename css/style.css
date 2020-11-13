@@ -137,7 +137,8 @@ section.banner{
 	position: relative;
 	left: -30px;
 	line-height: 70px;
-	background-image: url('../img/box-white-text.png');
+	color: white;
+	text-transform: lowercase;
 }
 
 section.veiculos-destaque{
