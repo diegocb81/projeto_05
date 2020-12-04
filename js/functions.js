@@ -69,4 +69,8 @@ $(function(){
         $("body").css("user-select", "auto");
     }
 
+    /*
+       mini-img => style="background-color:rgb(210,210,210);"
+       foto destaque => "background-image;
+    */
 })
