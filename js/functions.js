@@ -2,7 +2,7 @@ $(function(){
 
     var currentValue = 0;
     var isDrag = false;
-    var preco_maximo = 100000;
+    var preco_maximo = 500000;
     var preco_atual = 0;
 
     $('.pointer-barra').mousedown(function(){
@@ -44,12 +44,14 @@ $(function(){
     }
 
     function formatarTotal(preco_arr){
-        if (preco_arr[0] < 1000) {
+        if (preco_arr[0] < 1000){
             return preco_arr[0]+','+preco_arr[1];    
-        }else if (preco_arr[0] < 10000) {
+        }else if (preco_arr[0] < 10000){
             return preco_arr[0][0]+'.'+preco_arr[0].substr(1,preco_arr[0].length)+','+preco_arr[1];
-        }else{
+        }else if (preco_arr[0] < 100000){
             return preco_arr[0][0]+preco_arr[0][1]+'.'+preco_arr[0].substr(2,preco_arr[0].length)+','+preco_arr[1];
+        }else {
+            return preco_arr[0][0]+preco_arr[0][1]+preco_arr[1][1]+'.'+preco_arr[0].substr(3,preco_arr[0].length)+','+preco_arr[1];
         }
     }
 
