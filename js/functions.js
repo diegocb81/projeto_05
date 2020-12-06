@@ -1,5 +1,9 @@
 $(function(){
 
+    /*
+    Sistema de pesquisa.
+    */
+
     var currentValue = 0;
     var isDrag = false;
     var preco_maximo = 500000;
@@ -72,8 +76,7 @@ $(function(){
     }
 
     /*
-       mini-img => style="background-color:rgb(210,210,210);"
-       foto destaque => "background-image;
+       Sistema de slide da página individual de cada carro.
     */
 
     var imgShow = 3;
@@ -82,6 +85,7 @@ $(function(){
 
     initSlider();
     navigateSlider();
+    clicSlider();
     function initSlider(){
         var amt = $('.mini-img-wraper').length * 33.3;
         var elScroll = $('.nav-galeria-wraper');
@@ -111,4 +115,26 @@ $(function(){
                 }
             })
     }
+
+    function clicSlider(){
+        $('.mini-img-wraper').click(function(){
+            $('.mini-img-wraper').css('background-color','transparent');
+            $('this').css('background-color','rgb(210,210,210)');
+            var img = $(this).children().css('background-image');
+            $('.foto-destaque').css('background-image',img);
+        })
+
+        $('.mini-img-wraper').eq(0).click();
+    }
+
+    /*
+    Clicar e ir  para a div de contato com base no atributo goto.
+    */
+
+    $('[goto=contato]').click(function(){
+        $('nav a').css('color','black');
+        $(this).css('color','#EB2D2D');
+        $('html,body').animate({'scrollTop':$('#contato').offset().top});
+        return false
+    })
 })
