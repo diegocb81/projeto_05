@@ -77,16 +77,38 @@ $(function(){
     */
 
     var imgShow = 3;
-    var minIndex = imgShow - 1;
     var maxIndex = Math.ceil($('.mini-img-wraper').length/3) - 1;
     var curIndex = 0;
 
     initSlider();
+    navigateSlider();
     function initSlider(){
         var amt = $('.mini-img-wraper').length * 33.3;
         var elScroll = $('.nav-galeria-wraper');
         var elSingle = $('.mini-img-wraper');
         elScroll.css('width',amt+'%');
         elSingle.css('width',33.3*(100/amt)+'%');
+    }
+
+    function navigateSlider(){
+            $('.arrow-right-nav').click(function(){
+                if(curIndex < maxIndex){
+                    curIndex++;
+                    var elOff = $('.mini-img-wraper').eq(curIndex*3).offset().left - $('.nav-galeria-wraper').offset().left;
+                    $('.nav-galeria').animate({'scrollLeft':elOff+'px'});
+                }else{
+                    //console.log("Chegamos até o final!");
+                }
+            });
+
+            $('.arrow-left-nav').click(function(){
+                if (curIndex > 0){
+                    curIndex--;
+                    var elOff = $('.mini-img-wraper').eq(curIndex * 3).offset().left - $('.nav-galeria-wraper').offset().left;
+                    $('.nav-galeria').animate({ 'scrollLeft': elOff + 'px' });
+                } else {
+                    //console.log("Chegamos até o final!");
+                }
+            })
     }
 })
