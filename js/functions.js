@@ -130,11 +130,27 @@ $(function(){
     /*
     Clicar e ir  para a div de contato com base no atributo goto.
     */
+   
+    var directory = '/Curso Webmaster Front-End Completo - Danki Code/Projetos/projeto_05/'
 
     $('[goto=contato]').click(function(){
-        $('nav a').css('color','black');
-        $(this).css('color','#EB2D2D');
-        $('html,body').animate({'scrollTop':$('#contato').offset().top});
+        location.href=directory+'index.html?contato';
         return false
     })
+
+    checkUrl();
+
+    function checkUrl(){
+        var url = location.href.split('/');
+        var curPage = url[url.length-1].split('?');
+
+        if(curPage[1] != undefined && curPage[1] == 'contato'){
+            $('header nav a').css('color','black');
+            $('footer nav a').css('color','white');
+            $('[goto=contato]').css('color','#EB2D2D');
+            $('html,body').animate({'scrollTop':$('#contato').offset().top});
+        }
+ 
+    }
+
 })
