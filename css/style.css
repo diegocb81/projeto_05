@@ -49,7 +49,7 @@ nav.mobile ul{
 	display: none;
 	width: 100%;
 	left: 0;
-	top: 95px;
+	top: 110px;
 	border-bottom:4px solid #EB2D2D;
 	z-index: 999;
 	position: absolute;
@@ -90,7 +90,7 @@ section.banner{
 	height: 650px;
 	background-color: black;
 	background-image: url('../img/bg.jpg');
-	background-size: cover;
+	background-size: contain;
 	background-position: right bottom;
 	background-repeat: no-repeat;
 }
@@ -132,8 +132,7 @@ section.banner{
 
 .text-banner .text-banner-single:nth-of-type(4){
 	width: 320px;
-	font-size: 21px;
-	color: black;
+	font-size: 23px;
 	position: relative;
 	left: -30px;
 	line-height: 70px;
@@ -146,7 +145,7 @@ section.veiculos-destaque{
 }
 
 section.veiculos-destaque .container{
-	/*Vamos deixar o padrão que é 1400px*/
+	/*Deixar o padrão que é 1400px*/
 	/*max-width: 1000px;*/
 	padding:40px 0;
 }
@@ -261,6 +260,7 @@ section.veiculos-destaque .container{
 
 .half1-wraper li{
 	margin-left: 15px;
+	font-size: 18px;
 }
 
 .half1-wraper a{
@@ -448,7 +448,7 @@ section.venda{
 	width: 26px;
 	height: 26px;
 	position: absolute;
-	left: 0;
+	left: -13px;
 	top: -3px;
 	cursor: pointer;
 	border-radius: 8px;
@@ -769,9 +769,9 @@ section.sobre .descricao-autor{
 	}
 
 	section.banner{
-		background-size: cover;
-		background-position: 100px center;
-		height: 80vh;
+		background-size: contain;
+		background-position: left bottom;
+		height: 550px;
 	}
 
 	nav.desktop
@@ -823,8 +823,14 @@ section.sobre .descricao-autor{
 
 
 @media screen and (max-width: 580px){
+header div.logo img{
+	width: 170px;
+	position: relative;
+	top: 10px
+}
+
 .text-banner{
-	padding:30px;
+	padding: 80px;
 }
 
 .text-banner-single{
@@ -873,5 +879,15 @@ section.veiculos-destaque .container{
 @media screen and (max-width: 480px){
 	.vitrine-destaque{
 		width: 100%;
+	}
+
+	.text-banner{
+		padding: 40px;
+	}
+}
+
+@media screen and (max-width: 380px){
+	section.banner{
+		background-image: none;
 	}
 }
