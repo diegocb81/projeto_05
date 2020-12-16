@@ -134,7 +134,7 @@ $(function(){
     var directory = '/Curso Webmaster Front-End Completo - Danki Code/Projetos/projeto_05/'
 
     $('[goto=contato]').click(function(){
-        location.href=directory+'index.html?contato';
+        location.href=directory+'?contato';
         return false
     })
 
