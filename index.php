@@ -12,37 +12,33 @@
 
 <body>
 
-    <header>
+    <header style="border-bottom: 3px solid #EB2D2D;">
 
         <div class="container">
             <div class="logo">
                 <img src="img/logo.png" />
-            </div>
-            <!--logo-->
+            </div><!--logo-->
 
             <nav class="desktop">
                 <ul>
-                    <li><a style="color:#EB2D2D;" href="home">Home</a></li>
+                    <li><a href="home">Home</a></li>
                     <li><a href="venda">Venda</a></li>
                     <li><a href="sobre">Sobre</a></li>
                     <li><a goto="contato" href="">Contato</a></li>
                 </ul>
-            </nav>
-            <!--desktop-->
+            </nav><!--desktop-->
 
             <nav class="mobile">
                 <ul>
-                    <li><a style="color:#EB2D2D;" href="home">Home</a></li>
+                    <li><a href="home">Home</a></li>
                     <li><a href="venda">Venda</a></li>
                     <li><a href="sobre">Sobre</a></li>
                     <li><a goto="contato" href="">Contato</a></li>
                 </ul>
-            </nav>
-            <!--mobile-->
+            </nav><!--mobile-->
 
             <div class="clear"></div>
-        </div>
-        <!--container-->
+        </div><!--container-->
     </header>
 
     <?php
@@ -69,8 +65,7 @@
             </nav>
             <p>Todos os direitos reservados</p>
             <div class="clear"></div>
-        </div>
-        <!--container-->
+        </div><!--container-->
     </footer>
     <script src="js/jquery.js"></script>
     <script src="js/functions.js"></script>
